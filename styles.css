@@ -1,0 +1,64 @@
+#originals {
+	width: 400px;
+	float: left;
+}
+
+.tile, .label {
+	float: left;
+	text-align: center;
+}
+
+.label {
+	width: 75px;
+	height: 1em;
+	margin: 0;
+	font-weight: bold;
+}
+
+.row_label {
+	width: 1em;
+	height: 25px;
+	padding: 25px 0;
+	clear: left;
+	margin-right: 1em;
+}
+
+.col_label {
+	margin-bottom: 1em;
+}
+
+#originals .tile img {
+	width: 100px;
+	height: 100px;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
+#originals .tile:hover img {
+	width: 98px;
+	height: 98px;
+	border: 1px solid black;
+}
+
+.section { 
+	float: left;
+	margin-left: 2em;
+}
+
+#scramble_tiles, #scramble_fill_in {
+	width: 400px;
+	float: left;
+}
+
+#scramble_tiles .tile img, #scramble_fill_in .tile {
+	width: 75px;
+	height: 75px;
+	margin: 5px;
+	padding: 0;
+	border: 1px solid black;
+}
+
+#scramble_fill_in .tile {
+	margin: 0;
+}

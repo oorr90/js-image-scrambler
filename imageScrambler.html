@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Image Scrambler</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script src="scripts.js"></script>
+</head>
+
+<body>
+<div id="instructions">
+  <h1>Image Scrambler</h1>
+  <h2>Instructions:</h2>
+  <p>Click image pieces in any order to add them to the scramble. </p>
+  <p>When you are ready to print your puzzle, click the &quot;Hide Original&quot; button.</p>
+</div>
+<div class="section" id="orig_section">
+  <h2 id="orig_heading">Original image: <!-- Using Javascript, put the "hide  original" button here. --></h2>
+  <div id="originals"> 
+    <!-- using Javascript only, add images here.  See the CSS file for selectors.  --> 
+  </div>
+</div>
+<div class="section">
+  <h2>Scramble:</h2>
+  <div id="scramble_tiles"> 
+    <!-- using Javascript only, add tiles here as original images are clicked.
+Clicking a tile in this area will delete it.  See the CSS file for selectors.  --> 
+  </div>
+  <div id="scramble_fill_in"> </div>
+</div>
+<script>
+	// add row and column markers to the blank tiles area
+	// first is a blank row marker to make the alignment correct.
+	document.getElementById("scramble_fill_in").innerHTML += "<div class=\"label row_label\" style=\"height: 1em; padding: 0;\">" + " " + "</div>";
+	// column markers (1, 2, 3, 4)
+for (var i=0; i<4; i++) {
+	var next = i+1;
+	document.getElementById("scramble_fill_in").innerHTML += "<div class=\"label col_label\">" + 
+	next + "</div>";
+}
+// 4x4 grid of blank tiles
+for (var i=0; i<4; i++) {
+	// row marker at beginning of each row (A, B, C, or D)
+	document.getElementById("scramble_fill_in").innerHTML += "<div class=\"label row_label\">" + String.fromCharCode(65 + i) + "</div>";
+	// 4 tiles per row
+	for (var j=0; j<4; j++) {
+		document.getElementById("scramble_fill_in").innerHTML += "<div class=\"tile\"></div>";
+	}
+}
+</script>
+</body>
+</html>
