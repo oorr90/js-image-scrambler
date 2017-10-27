@@ -3,6 +3,8 @@ First steps of an image scrambler
 
 This was an assignment in SMCC's Scripting for the Web Fall 2017
 
+I only created the JavaScript file - everything else was written by Prof. Valerie Green, and not meant to be edited
+
 ### The Program:
 Add the image tiles to the page (in order) to form one large graphic
 
